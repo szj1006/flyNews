@@ -7,10 +7,10 @@ $top_list = json_decode(curl('http://reader.res.meizu.com/reader/index/index.jso
 $old_news_list = json_decode(curl('http://reader.res.meizu.com/reader/importantnew/'.$old_date.'/importantnew.json'),true);
 $news_list = json_decode(curl('http://reader.res.meizu.com/reader/importantnew/'.$date.'/importantnew.json'),true);
 if(empty($news_list)){$news_list = $old_news_list;$date = $old_date;}
-$top_list_1 = array('title'=>$top_list['topList']['2']['title'],'desc'=>$top_list['topList']['2']['description'],'id'=>$top_list['topList']['2']['articleId'],'pic'=>$top_list['topList']['2']['imgUrlList']['0'],'from'=>$top_list['topList']['2']['contentSourceName']);
-$top_list_2 = array('title'=>$top_list['topList']['3']['title'],'desc'=>$top_list['topList']['3']['description'],'id'=>$top_list['topList']['3']['articleId'],'pic'=>$top_list['topList']['3']['imgUrlList']['0'],'from'=>$top_list['topList']['3']['contentSourceName']);
-$top_list_3 = array('title'=>$top_list['topList']['4']['title'],'desc'=>$top_list['topList']['4']['description'],'id'=>$top_list['topList']['4']['articleId'],'pic'=>$top_list['topList']['4']['imgUrlList']['0'],'from'=>$top_list['topList']['4']['contentSourceName']);
-$top_list_4 = array('title'=>$top_list['topList']['5']['title'],'desc'=>$top_list['topList']['5']['description'],'id'=>$top_list['topList']['5']['articleId'],'pic'=>$top_list['topList']['5']['imgUrlList']['0'],'from'=>$top_list['topList']['5']['contentSourceName']);
+$top_list_1 = array('title'=>$top_list['topList']['1']['title'],'desc'=>$top_list['topList']['1']['description'],'id'=>$top_list['topList']['1']['articleId'],'pic'=>$top_list['topList']['1']['imgUrlList']['0'],'from'=>$top_list['topList']['1']['contentSourceName']);
+$top_list_2 = array('title'=>$top_list['topList']['2']['title'],'desc'=>$top_list['topList']['2']['description'],'id'=>$top_list['topList']['2']['articleId'],'pic'=>$top_list['topList']['2']['imgUrlList']['0'],'from'=>$top_list['topList']['2']['contentSourceName']);
+$top_list_3 = array('title'=>$top_list['topList']['3']['title'],'desc'=>$top_list['topList']['3']['description'],'id'=>$top_list['topList']['3']['articleId'],'pic'=>$top_list['topList']['3']['imgUrlList']['0'],'from'=>$top_list['topList']['3']['contentSourceName']);
+$top_list_4 = array('title'=>$top_list['topList']['4']['title'],'desc'=>$top_list['topList']['4']['description'],'id'=>$top_list['topList']['4']['articleId'],'pic'=>$top_list['topList']['4']['imgUrlList']['0'],'from'=>$top_list['topList']['4']['contentSourceName']);
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -21,36 +21,16 @@ $top_list_4 = array('title'=>$top_list['topList']['5']['title'],'desc'=>$top_lis
     <meta name="description" content="<?=DESCRIPTION?>">
     <meta name="keywords" content="<?=KEYWORDS?>">
     <title><?=TITLE?></title>
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet">
+    <script src="public/js/holder.min.js"></script>
+    <script src="public/js/ie10-viewport-bug-workaround.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-        <nav class="navbar navbar-default navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Menu</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><?=TITLE?></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">网站首页</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -127,9 +107,7 @@ html;
             </ul>
         </div>
     </div>
-    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="public/js/holder.min.js"></script>
-    <script src="public/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   </body>
 </html>
